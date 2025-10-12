@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+    background-color: #EFEEEA;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Tipografia Base */
+.tituloPrincipal { 
+    font-family: "Lexend", sans-serif;
+    font-weight: 800;
+    font-size: 40px; 
+    color: #253900;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.tituloSecundario {
+    font-family: "Lexend", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: #EFEEEA;
+    margin-bottom: 15px;
+}
+
+.paragrafoTexto {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    color: #253900;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    background-color: #253900;
+    color: #EFEEEA;
+    height: 90px;
+    padding: 0 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logotipo {
+    font-family: "Lexend", sans-serif;
+    font-weight: 700;
+    font-size: 80px;
+    margin: 0;
+}
+
+.navContainer {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Efeito de Hover no Menu */
+.menu {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    font-size: 20px;
+    margin-right: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  
+}
+
+.menu li:hover {
+    color: #ffc107; 
+    text-decoration: underline; 
+    cursor: pointer; 
+}
+
+.menu li {
+    transition: color 0.3s ease, text-decoration 0.3s ease; 
+}
+
+.icones {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+}
+
+
+/* SEÇÃO 1: HERO/INTRODUÇÃO */
+.parceiroHero {
+ 
+    background-image: url(../assets/imagemparceria.jpg); 
+    background-size: cover;
+    color: #EFEEEA;
+    padding: 150px 80px;
+    text-align: center;
+  
+}
+
+.tituloHero {
+    font-family: "Lexend", sans-serif;
+    font-weight: 800;
+    font-size: 60px;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #EFEEEA;
+}
+
+.subtituloHero {
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #EFEEEA;
+}
+
+.botaoDestaque {
+    display: inline-block;
+    background-color: #ffc107; 
+    color: #253900;
+    font-family: "Lexend", sans-serif;
+    font-weight: 700;
+    padding: 15px 35px;
+    border-radius: 5px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.botaoDestaque:hover {
+    background-color: #e6b000;
+    transform: translateY(-2px);
+}
+
+
+.beneficiosContainer {
+    background-color: #EFEEEA;
+    padding: 80px 80px 100px 80px;
+}
+
+.listaBeneficios {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.beneficioItem {
+    flex: 1;
+    text-align: center;
+    padding: 30px;
+    border: 1px solid #c9c9c9;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.beneficioItem:hover {
+    box-shadow: 0 10px 20px rgba(37, 57, 0, 0.1);
+    transform: translateY(-5px);
+    color: #ffc107;
+}
+
+.iconBeneficio {
+    font-size: 50px;
+    color: #253900;
+    margin-bottom: 20px;
+}
+
+.subtituloBeneficio {
+    font-family: "Lexend", sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: #253900;
+    margin-bottom: 10px;
+}
+
+.textoBeneficio {
+    font-size: 15px;
+    color: #4a4a4a;
+}
+
+
+/* SEÇÃO 3: CONSULTORIA E INOVAÇÃO */
+.consultoriaInovacao {
+    display: flex;
+    gap: 40px;
+    padding: 80px;
+    background-color: #253900; 
+    color: #EFEEEA;
+    background-image: url(../assets/imagemparceriatres.webp);
+    background-size: cover;
+}
+
+.consultoriaCard, .inovacaoCard {
+    flex: 1;
+    padding: 30px;
+    border-radius: 8px;
+  
+    background-color: rgba(37, 57, 0, 0.7); 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    
+   
+    transition: background-color 0.4s ease, transform 0.3s ease;    
+    cursor: pointer;
+}
+
+
+.consultoriaCard:hover, .inovacaoCard:hover {
+    background-color: #253900; 
+    transform: translateY(-5px); 
+}
+
+
+.consultoriaCard .paragrafoTexto, .inovacaoCard .paragrafoTexto {
+    color: #DDECDA;
+}
+
+
+.consultoriaCard .tituloSecundario, .inovacaoCard .tituloSecundario {
+    color: #EFEEEA;
+}
+
+.linkConsultoria {
+    display: inline-block;
+    color: #ffc107; 
+    font-weight: 600;
+    margin-top: 15px;
+    transition: color 0.3s ease;
+}
+
+.linkConsultoria:hover {
+    color: #EFEEEA;
+}
+
+/* SEÇÃO 4: FORMULÁRIO */
+.formularioParceiroWrapper {
+    background-color: #EFEEEA;
+    padding: 100px 80px;
+    text-align: center;
+}
+
+.formularioContainer {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    border: 3px solid #253900;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.textoForm {
+    color: #4a4a4a;
+    font-size: 16px;
+}
+
+.formParceria {
+    text-align: left;
+    margin-top: 30px;
+}
+
+.formGrupo {
+    margin-bottom: 20px;
+}
+
+.formGrupo label {
+    display: block;
+    font-family: "Lexend", sans-serif;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #253900;
+}
+
+.formParceria input, .formParceria select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #c9c9c9;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.botaoSubmit {
+    display: block;
+    width: 100%;
+    background-color: #253900; 
+    color: #EFEEEA;
+    font-family: "Lexend", sans-serif;
+    font-weight: 700;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 30px;
+}
+
+.botaoSubmit:hover {
+    background-color: #385700; 
+    transform: translateY(-2px);
+}
+
+
+/* SEÇAO FOOTER */
+.site-footer {
+    background-color: #253900;
+    color: #EFEEEA;
+    padding-top: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footerContainer {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footerColumn {
+    width: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+
+.footerColumn h3 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 22px;
+    color: #ffc107;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.footerColumn p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.footerColumn ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footerColumn ul li a {
+    color: #EFEEEA;
+    transition: color 0.3s ease;
+    padding: 5px 0;
+    display: block;
+}
+
+.footerColumn ul li a:hover {
+    color: #ffc107;
+}
+
+.footerSocial a {
+    color: #EFEEEA;
+    font-size: 20px;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.footerSocial a:hover {
+    color: #ffc107;
+}
+
+.footerBottom {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid rgba(239, 238, 234, 0.2);
+    margin-top: 20px;
+}
+
+.footerBottom p {
+    margin: 0;
+    font-size: 14px;
+}

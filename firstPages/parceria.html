@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biotech | Seja Nosso Parceiro</title>
+    <link rel="stylesheet" href="./stylesejaParceiro.css"> 
+    <link rel="shortcut icon" href="../assets/letra-b.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+    <header>
+        <div class="cabecalho">
+            <h1 class="logotipo">BIOTECH</h1>
+
+            <div class="navContainer">
+                <ul class="menu">
+                    <a href="./index.html"><li>Home</li></a>
+                    <a href="./firstPages/sobreNos.html"><li>Sobre Nós</li></a>
+                    <a href="./firstPages/tecnologias.html"><li>Tecnologias</li></a>
+                    <a href="./firstPages/educacao.html"><li>Educação</li></a>
+                    <a href="./Solucoes/solucoes.html"><li>Pesquisas</li></a>
+                    <a href="./firstPages/parceiros.html"><li class="menuDestaque">Seja Nosso Parceiro</li></a>
+                </ul>
+                <div class="icones">
+                    <a href="./Form/telaLogin.html"><i class="fa-solid fa-user iconPerfil"></i></a>
+                    <i class="fa-solid fa-bars iconMenu"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        
+        <section class="parceiroHero">
+            <div class="heroConteudo">
+                <h1 class="tituloHero">Construa um Futuro Mais Verde. Seja um Parceiro Biotech.</h1>
+                <p class="subtituloHero">Junte-se a nós para inovar em sustentabilidade e preservação ambiental. Oferecemos soluções tecnológicas e consultoria especializada para transformar sua empresa.</p>
+                <a href="#formulario" class="botaoDestaque">Iniciar Parceria</a>
+            </div>
+        </section>
+
+        <section class="beneficiosContainer">
+            <h2 class="tituloPrincipal">Vantagens de ser Parceiro</h2>
+            <div class="listaBeneficios">
+                
+                <div class="beneficioItem">
+                    <i class="fa-solid fa-seedling iconBeneficio"></i>
+                    <h3 class="subtituloBeneficio">Impacto Sustentável</h3>
+                    <p class="textoBeneficio">Certificação e comprovação de impacto positivo em projetos de reflorestamento e conservação hídrica.</p>
+                </div>
+
+                <div class="beneficioItem">
+                    <i class="fa-solid fa-microscope iconBeneficio"></i>
+                    <h3 class="subtituloBeneficio">Acesso à Inovação</h3>
+                    <p class="textoBeneficio">Prioridade no acesso a novas tecnologias de bioengenharia e monitoramento ambiental digital.</p>
+                </div>
+
+                <div class="beneficioItem">
+                    <i class="fa-solid fa-handshake iconBeneficio"></i>
+                    <h3 class="subtituloBeneficio">Consultoria Estratégica</h3>
+                    <p class="textoBeneficio">Suporte da nossa equipe de especialistas em adequação ESG e gestão de resíduos complexos.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="consultoriaInovacao">
+            <div class="consultoriaCard">
+                <h2 class="tituloSecundario">Consultoria Ambiental</h2>
+                <p class="paragrafoTexto">Nossos consultores desenvolvem planos de ação personalizados para otimizar o uso de recursos, reduzir a pegada de carbono e garantir a conformidade regulatória.</p>
+                <a href="#formulario" class="linkConsultoria">Saiba mais sobre a Consultoria <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="inovacaoCard">
+                <h2 class="tituloSecundario">Tecnologia e Inovação</h2>
+                <p class="paragrafoTexto">Acesso exclusivo a softwares de análise de dados ambientais e sistemas de bio-remediação patenteados pela Biotech.</p>
+                <a href="./firstPages/tecnologias.html" class="linkConsultoria">Ver Nossas Tecnologias <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <section id="formulario" class="formularioParceiroWrapper">
+            <div class="formularioContainer">
+                <h2 class="tituloPrincipal">Pronto para Mudar?</h2>
+                <p class="paragrafoTexto textoForm">Preencha o formulário abaixo e um de nossos especialistas entrará em contato em até 48 horas.</p>
+                
+                <form class="formParceria">
+                    <div class="formGrupo">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div class="formGrupo">
+                        <label for="empresa">Nome da Empresa</label>
+                        <input type="text" id="empresa" name="empresa" required>
+                    </div>
+                    <div class="formGrupo">
+                        <label for="email">E-mail Corporativo</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="formGrupo">
+                        <label for="interesse">Principal Área de Interesse</label>
+                        <select id="interesse" name="interesse" required>
+                            <option value="" disabled selected>Selecione uma opção</option>
+                            <option value="consultoria">Consultoria Ambiental/ESG</option>
+                            <option value="tecnologia">Adoção de Tecnologia Biotech</option>
+                            <option value="pesquisa">Pesquisa e Desenvolvimento Conjunto</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="botaoSubmit">Enviar Proposta de Parceria</button>
+                </form>
+            </div>
+        </section>
+        
+    </main>
+    
+    <footer class="site-footer">
+        <div class="footerContainer">
+            <div class="footerColumn">
+                <h3>Sobre Nós</h3>
+                <p>Somos uma empresa dedicada à educação ambiental, desenvolvimento de tecnologias sustentáveis e parcerias com startups inovadoras.</p>
+            </div>
+            <div class="footerColumn">
+                <h3>Links Úteis</h3>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="#">Projetos</a></li>
+                    <li><a href="#">Startups</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footerColumn">
+                <h3>Contato</h3>
+                <p>Email: contato@biotech.com</p>
+                <p>Telefone: +55 11 99999-9999</p>
+                <div class="footerSocial">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footerBottom">
+            <p>© 2025 Nome da Empresa. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,281 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@700;800&family=Poppins:wght@300;400;600;700;900&display=swap');
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  color: #253900;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+body {
+  background: url("../assets/funodinicio3.jpg") center center/cover;
+}
+
+
+.cabecalho {
+   position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  margin-bottom: 20px;
+  background-color: #253900; 
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 70px; 
+  
+}
+
+
+
+
+
+.logotipo{
+  margin: 0;
+  padding-bottom: 5px;
+  font-size: 80px;
+  font-family: "Lexend", sans-serif;
+  font-weight: 700;
+  line-height: 1;
+  color: #EFEEEA;
+}
+
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.menu{
+  display: flex;
+  flex-direction: row;
+
+  gap: 12px; 
+
+  font-size: 20px; 
+ 
+  margin-right: 5px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  list-style: none;
+  align-items: center; 
+ 
+  flex-wrap: nowrap; 
+}
+
+.menu li {
+  color: #EFEEEA;
+  cursor: pointer;
+ 
+  white-space: nowrap; 
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+
+.menu li:hover {
+  color: #ffc107;
+  text-decoration: underline;
+}
+
+/* ícones */
+.icones{
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+
+.iconPerfil, .iconMenu {
+  font-size: 25px;
+  margin: 0;
+  padding: 0;
+  color: #EFEEEA;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+.form-fundo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;               
+  min-height: calc(100vh - 90px);         
+  padding: 40px 20px;
+  padding-top: 100px;     
+  
+}
+
+/* caixa do formulário */
+.form-container {
+  background-color: #253900;              
+  padding: 40px 30px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0px 8px 25px rgba(0,0,0,0.3);
+  color: #EFEEEA;
+}
+
+/* título */
+.form-titulo {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 800;
+ 
+  padding: 0;
+  color: #EFEEEA;
+}
+
+/* grupo de campos */
+.form-grupo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px; 
+}
+
+.form-grupo label {
+  margin-bottom: 6px;  
+  font-weight: 600;
+  color: #EFEEEA;
+}
+
+
+.form-grupo input:not([type="radio"]),
+.form-grupo select {
+  padding: 12px;
+  border: 2px solid #253900;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+  transition: box-shadow 0.2s, border-color 0.2s;
+  background-color: #FFFFFF; 
+  color: #253900;
+}
+
+
+.form-grupo input:focus,
+.form-grupo select:focus {
+  border-color: #ffc107;
+  box-shadow: 0 0 6px rgba(255, 193, 7, 0.25);
+  outline: none;
+}
+
+
+button:focus,
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+
+.radio-opcoes {
+  display: flex;
+  gap: 25px;
+  margin-top: 5px;
+  align-items: center;
+}
+
+.radio-opcoes label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 400;
+  color: #EFEEEA;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+
+.radio-opcoes input[type="radio"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #EFEEEA;
+  border-radius: 50%;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.radio-opcoes input[type="radio"]:checked {
+  background-color: #ffc107;
+  border-color: #ffc107;
+}
+
+
+.form-botoes {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  background-color: #EFEEEA;  
+  color: #253900;
+}
+
+
+button:hover {
+  background-color: #ffc107;
+  color: #253900;
+}
+
+
+.btn-cancelar {
+  background-color: #EFEEEA;
+  color: red;
+}
+
+.btn-cancelar:hover {
+  background-color: red;
+  color: #EFEEEA;
+}
+
+
+.btn-voltar {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  color: #EFEEEA;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid #EFEEEA;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: 0.3s;
+  margin-top: 20px;
+}
+
+.btn-voltar:hover {
+  background-color: #EFEEEA;
+  color: #253900;
+}
+
