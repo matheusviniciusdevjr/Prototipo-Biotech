@@ -279,3 +279,63 @@ button:hover {
   color: #253900;
 }
 
+
+.link-reset-senha {
+
+    display: block; 
+    margin-top: 3px; 
+    margin-bottom: 15px;
+    
+    text-align: right; 
+    margin-bottom: 20px;
+}
+
+.link-recuperar-senha {
+    color: #ffc107;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.link-recuperar-senha:hover {
+    color: #EFEEEA; 
+    text-decoration: underline;
+}
+
+
+   .alerta-dev {
+            text-align: center; 
+            padding: 10px; 
+            background-color: #ffc107; 
+            border-radius: 8px; 
+            margin-bottom: 20px;
+        }
+        .alerta-dev strong {
+            color: #253900; 
+            font-weight: 700;
+        }
+        .alerta-dev p {
+            color: #253900; 
+            font-size: 12px; 
+            margin-top: 5px;
+        }
+
+          .locked-screen {
+            background-color: #253900;
+            color: #ecf0f1;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .locked-screen h2 {
+            color: #ffc107;
+            margin-bottom: 20px;
+        }
+        .btn-voltar {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }

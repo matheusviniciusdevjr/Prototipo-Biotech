@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         
     } else {
        
-        $_SESSION['erro'] = "❌ Erro ao cadastrar. Tente novamente. Detalhe do erro: " . $stmt->error;
+        $_SESSION['erro'] = " Erro ao cadastrar. Tente novamente. Detalhe do erro: " . $stmt->error;
         header("Location: form.html");
         exit();
     }

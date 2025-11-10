@@ -16,7 +16,7 @@
 
 
 
-  <!-- HEADER -->
+
 
   <header>
 
@@ -58,7 +58,7 @@
 
 
 
-  <!-- FORM-->
+
 
   <main class="form-fundo">
 
@@ -154,7 +154,10 @@
       </div>
 
 
-
+        <div class="form-grupo">
+    <label for="email_confirmacao">Confirme seu E-mail de Cadastro</label>
+    <input type="email" id="email_confirmacao" name="email_confirmacao" placeholder="E-mail para verificação " required>
+        </div>
   
 
       <div class="form-grupo">

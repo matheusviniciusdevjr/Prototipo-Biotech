@@ -1,3 +1,7 @@
+<?php
+
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -10,15 +14,6 @@
 </head>
 <body>
 
-<?php
-
-if (isset($_SESSION['cadastro_sucesso'])) {
-    echo '<div class="mensagem-sucesso">' . $_SESSION['cadastro_sucesso'] . '</div>';
-    unset($_SESSION['cadastro_sucesso']); 
-}
-?>
-
-  <!-- HEADER -->
   <header>
     <div class="cabecalho">
       <h1 class="logotipo">BIOTECH</h1>
@@ -39,7 +34,6 @@ if (isset($_SESSION['cadastro_sucesso'])) {
     </div>
   </header>
 
-  <!-- LOGIN -->
   <main class="form-fundo">
     <div class="form-container">
       <h2 class="form-titulo">Login</h2>
@@ -54,6 +48,10 @@ if (isset($_SESSION['cadastro_sucesso'])) {
           <label for="senha">Senha</label>
           <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
         </div>
+        
+        <div class="link-reset-senha" >
+             <a href="resetSenha.php" class="link-recuperar-senha">Esqueceu a senha?</a>
+        </div>
 
         <div class="form-botoes">
           <button type="submit" class="btn-cadastrar">Entrar</button>
@@ -61,7 +59,7 @@ if (isset($_SESSION['cadastro_sucesso'])) {
         </div>
       </form>
 
-   
+    
       <div style="text-align: center; margin-top: 20px;">
         <p style="color: #EFEEEA; margin-bottom: 5px;">Não tem uma conta?</p>
         <a href="./form.php">
@@ -69,13 +67,13 @@ if (isset($_SESSION['cadastro_sucesso'])) {
         </a>
       </div>
 
-   
-<div style="margin-bottom: 10px;">
-    <a href="../index.html" class="btn-voltar">
-      <i class="fa-solid fa-arrow-left"></i> Voltar
-    </a>
-  </div>
-  
+    
+      <div style="margin-bottom: 10px;">
+        <a href="../index.html" class="btn-voltar">
+          <i class="fa-solid fa-arrow-left"></i> Voltar
+        </a>
+      </div>
+    
 
     </div>
   </main>
