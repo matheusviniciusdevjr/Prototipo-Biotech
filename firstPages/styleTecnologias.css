@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Variáveis de Cores e Configurações Globais */
+:root {
+    --cor-principal: #253900; /* Verde Escuro da Biotech */
+    --cor-secundaria: #ffc107; /* Amarelo Destaque */
+    --cor-fundo: #EFEEEA; /* Branco/Off-White do Fundo */
+    --cor-texto: #253900;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+    background-color: var(--cor-fundo); 
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* ESTILIZAÇÃO DO HEADER (MANTIDO DO EXEMPLO) */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cor-principal);
+    color: var(--cor-fundo);
+    height: 90px; 
+    padding: 0 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logotipo {
+    font-family: "Lexend", sans-serif;
+    font-weight: 700;
+    font-size: 80px; 
+    margin: 0;
+}
+
+.navContainer {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    font-size: 20px;
+    margin-right: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.menuDestaque {
+    color: var(--cor-secundaria);
+    text-decoration: underline;
+}
+
+.menu li:hover {
+    color: var(--cor-secundaria); 
+    text-decoration: underline; 
+    cursor: pointer; 
+}
+
+.menu li {
+    transition: color 0.3s ease, text-decoration 0.3s ease; 
+}
+
+.icones {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 25px;
+}
+
+.icones a, .icones i {
+    color: var(--cor-fundo);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.icones a:hover, .icones i:hover {
+    color: var(--cor-secundaria); 
+}
+
+/* ESTILOS GERAIS DE TEXTO */
+.tituloPrincipal { 
+    font-family: "Lexend", sans-serif;
+    font-weight: 800;
+    font-size: 55px;
+    color: #ffc107;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.tituloVideo {
+    margin-bottom: 25px;
+    margin-top: 40px;
+}
+
+.paragrafoTexto {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    color: var(--cor-texto);
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+
+/* SEÇÃO 1: HERO com Imagem e Legenda */
+.tecnologiaHero {
+    padding: 60px 80px 0 80px;
+    background-color: #EFEEEA;
+    text-align: center;
+}
+
+.heroImagemContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.imagemDestaque {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease;
+}
+
+.imagemDestaque:hover {
+    transform: scale(1.02);
+}
+
+/* AJUSTE PARA O NOVO DESIGN DA LEGENDA */
+
+.legendaHeroFundoVerde {
+    /* REMOVIDO: background-color: var(--cor-principal); */
+    /* REMOVIDO: box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); */
+    background-color: transparent; /* Garante que não haja fundo */
+    max-width: 800px;
+    margin: 30px auto 80px auto; /* Aumentei a margem superior para afastar da imagem */
+    padding: 20px 0; 
+    text-align: center;
+    position: relative;
+    z-index: 10; 
+    cursor: pointer;
+}
+
+.legendaTexto {
+    font-size: 25px;
+    font-weight: 800;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    color: var(--cor-principal); 
+    transition: color 0.3s ease, transform 0.3s ease; 
+    display: inline-block; 
+}
+
+.legendaTexto:hover {
+    color: var(--cor-secundaria); 
+    transform: scale(1.05);
+}
+/* SEÇÃO 2: Três Blocos de Conteúdo */
+.blocosContainer {
+    padding: 80px 80px; 
+    background-color: var(--cor-fundo);
+    background-image: url(../assets/renderizacao-3d-de-um-design-de-poliplexo-baixo-comunicacoes-de-rede.jpg);
+    background-size: cover;
+
+}
+
+.listaBlocos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blocoItem {
+    flex: 1;
+    max-width: 350px;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blocoItem:hover {
+    transform: translateY(-10px);
+ 
+}
+
+.imagemBloco {
+    width: 100%;
+    height: 250px; 
+    object-fit: cover;
+    display: block;
+}
+
+.blocoConteudoFundoVerde {
+    background-color: var(--cor-principal); 
+    color: var(--cor-fundo);
+    padding: 25px 20px;
+}
+
+.subtituloBloco {
+    font-family: "Lexend", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    margin: 0 0 10px 0;
+    color: var(--cor-secundaria);
+}
+
+.textoBloco {
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+    color: var(--cor-fundo);
+}
+
+.botaoBlocosContainer {
+    text-align: center;
+    margin-top: 60px; 
+}
+
+.botaoVejaMais {
+    display: inline-block;
+    background-color: var(--cor-principal); 
+    color: var(--cor-fundo);
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.botaoVejaMais:hover {
+    background-color: var(--cor-secundaria); 
+    color: var(--cor-principal); 
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.botaoVejaMais i {
+    margin-left: 10px; 
+    transition: transform 0.3s ease;
+}
+
+.botaoVejaMais:hover i {
+    transform: translateX(5px); 
+}
+
+/* SEÇÃO 3: Vídeo e Texto Centralizado */
+.videoContainerWrapper {
+    background-color: #253900;
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.videoConteudo {
+    max-width: 853px; /* Largura padrão de iframe 16:9 */
+    margin: 0 auto;
+}
+
+.videoYoutube {
+    width: 100%;
+    height: auto;
+    min-height: 480px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.textoVideoDescricao {
+    max-width: 800px; 
+    margin: 0 auto 40px auto; 
+    font-size: 18px;
+    color: #EFEEEA;
+}
+
+
+/* SEÇÃO 4: Texto à Esquerda e Imagem à Direita */
+.solucaoDestaqueContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 80px; 
+    background-color: var(--cor-fundo);
+    gap: 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.solucaoDestaqueTexto {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+}
+
+.solucaoDestaqueImagem {
+    flex: 1;
+    max-width: 50%;
+}
+
+.imagemSolucaoDestaque {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.imagemSolucaoDestaque:hover {
+    transform: scale(1.02);
+}
+
+.textoSolucao {
+    text-align: left;
+}
+
+
+/* ESTILIZAÇÃO DO FOOTER (MANTIDO DO EXEMPLO) */
+.site-footer {
+    background-color: var(--cor-principal);
+    color: var(--cor-fundo);
+    padding-top: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footerContainer {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footerColumn {
+    width: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+
+.footerColumn h3 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 22px;
+    color: var(--cor-secundaria);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.footerColumn p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.footerColumn ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footerColumn ul li a {
+    color: var(--cor-fundo);
+    transition: color 0.3s ease;
+    padding: 5px 0;
+    display: block;
+}
+
+.footerColumn ul li a:hover {
+    color: var(--cor-secundaria);
+}
+
+.footerSocial a {
+    color: var(--cor-fundo);
+    font-size: 20px;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.footerSocial a:hover {
+    color: var(--cor-secundaria);
+}
+
+.footerBottom {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid rgba(239, 238, 234, 0.2);
+    margin-top: 20px;
+}
+
+.footerBottom p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Media Queries para Responsividade Básica (Opcional, mas recomendado) */
+@media (max-width: 1200px) {
+    .listaBlocos {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    .blocoItem {
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 900px) {
+    .cabecalho {
+        padding: 0 20px;
+    }
+    .menu {
+        display: none; /* Esconde o menu para telas menores */
+    }
+    .iconMenu {
+        display: block !important; /* Mostra o ícone do menu sanduíche */
+    }
+
+    .tituloPrincipal {
+        font-size: 40px;
+    }
+    .solucaoDestaqueContainer {
+        flex-direction: column;
+        padding: 40px 40px;
+    }
+    .solucaoDestaqueTexto, .solucaoDestaqueImagem {
+        max-width: 100%;
+        text-align: center;
+    }
+    .textoSolucao {
+        text-align: center;
+    }
+    .footerContainer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footerColumn {
+        width: 80%;
+        min-width: unset;
+    }
+}
+
+@media (max-width: 600px) {
+    .logotipo {
+        font-size: 60px;
+    }
+    .tecnologiaHero {
+        padding: 40px 20px 0 20px;
+    }
+    .blocosContainer {
+        padding: 40px 20px;
+    }
+    .listaBlocos {
+        flex-direction: column;
+    }
+    .blocoItem {
+        max-width: 100%;
+    }
+    .videoYoutube {
+        min-height: 250px;
+    }
+}

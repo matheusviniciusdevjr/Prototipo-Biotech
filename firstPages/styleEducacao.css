@@ -1,0 +1,615 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Variáveis de Cores e Configurações Globais */
+:root {
+    --cor-principal: #253900; /* Verde Escuro da Biotech */
+    --cor-secundaria: #ffc107; /* Amarelo Destaque */
+    --cor-fundo: #EFEEEA; /* Branco/Off-White do Fundo */
+    --cor-texto: #253900;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+    background-color: var(--cor-fundo); 
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* ESTILIZAÇÃO DO HEADER (MANTIDO DO EXEMPLO) */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cor-principal);
+    color: var(--cor-fundo);
+    height: 90px; 
+    padding: 0 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative; /* Para garantir que o menu fique acima do vídeo */
+    z-index: 1000;
+}
+
+.logotipo {
+    font-family: "Lexend", sans-serif;
+    font-weight: 700;
+    font-size: 80px; 
+    margin: 0;
+}
+
+.navContainer {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    font-size: 20px;
+    margin-right: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.menuDestaque {
+    color: var(--cor-secundaria);
+    text-decoration: underline;
+}
+
+.menu li:hover {
+    color: var(--cor-secundaria); 
+    text-decoration: underline; 
+    cursor: pointer; 
+}
+
+.menu li {
+    transition: color 0.3s ease, text-decoration 0.3s ease; 
+}
+
+.icones {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 25px;
+}
+
+.icones a, .icones i {
+    color: var(--cor-fundo);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.icones a:hover, .icones i:hover {
+    color: var(--cor-secundaria); 
+}
+
+/* ESTILOS GERAIS DE TEXTO */
+.tituloPrincipal { 
+    font-family: "Lexend", sans-serif;
+    font-weight: 800;
+    font-size: 55px;
+    color: var(--cor-principal);
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.tituloSecundario {
+    font-family: "Lexend", sans-serif;
+    font-weight: 700;
+    font-size: 38px;
+    color: var(--cor-principal);
+    margin-bottom: 25px;
+}
+
+.paragrafoTexto {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    color: var(--cor-texto);
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.textoCentralizado {
+    max-width: 900px;
+    margin: 0 auto 50px auto;
+    text-align: center;
+}
+
+/* SEÇÃO HERO COM VÍDEO DE FUNDO */
+.heroVideoFundo {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Altura do vídeo */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cor-fundo);
+    text-align: center;
+}
+
+#videoFundoHero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    object-fit: cover;
+}
+
+.overlayConteudo {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.4); 
+    padding: 40px 60px;
+    border-radius: 15px;
+    max-width: 800px;
+  
+    transition: background-color 0.4s ease, transform 0.4s ease; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.overlayConteudo:hover {
+  
+    transform: scale(1.03); 
+    
+    background-color: rgba(37, 57, 0, 0.7); 
+   
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5); 
+}
+
+.tituloHero {
+    font-family: "Lexend", sans-serif;
+    font-weight: 800;
+    font-size: 60px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    color: var(--cor-fundo);
+}
+
+.subtituloHero {
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--cor-fundo);
+    margin: 0;
+}
+
+/* SEÇÕES DE CONTEÚDO (Texto e Imagem) */
+.conteudoEducacao {
+    padding: 80px 80px;
+}
+
+.secaoVerde {
+    background-color: var(--cor-principal);
+    color: var(--cor-fundo);
+}
+
+.secaoVerde .tituloSecundario, .secaoVerde .paragrafoTexto {
+    color: var(--cor-fundo);
+}
+.secaoVerde .tituloSecundario {
+    color: var(--cor-secundaria); /* Título amarelo no fundo verde */
+}
+
+.secaoBranca {
+      background-color: #ffc107;
+    color: var(--cor-texto);
+}
+
+.containerConteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+  
+}
+
+.textoConteudo {
+    flex: 1;
+    max-width: 50%;
+}
+
+.imagemConteudo {
+    flex: 1;
+    max-width: 50%;
+}
+
+.imagemSecao {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.imagemSecao:hover {
+    transform: scale(1.02);
+}
+
+/* SEÇÃO DE GAMIFICAÇÃO */
+.gamificacaoContainer {
+    padding: 80px 80px;
+    background-color: var(--cor-fundo);
+    text-align: center;
+}
+
+.gamificacaoTitulo {
+    display: flex; /* Para alinhar o ícone ao lado */
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    color: var(--cor-principal);
+}
+
+.iconGamificacao {
+    font-size: 60px;
+    color: var(--cor-secundaria);
+}
+
+.jogosLista {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 60px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.jogoItem {
+    flex: 1;
+    max-width: 350px;
+    background-color: var(--cor-fundo);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid transparent; /* Para a borda no hover */
+}
+
+.jogoItem:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    border-color: var(--cor-secundaria); /* Borda amarela no hover */
+}
+
+.imagemJogo {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.jogoItem:hover .imagemJogo {
+    transform: scale(1.03);
+}
+
+.tituloJogo {
+    font-family: "Lexend", sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    color: var(--cor-principal);
+    margin-bottom: 15px;
+}
+
+.iconJogo {
+    font-size: 45px;
+    color: var(--cor-secundaria);
+    margin-bottom: 25px;
+    display: block;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.jogoItem:hover .iconJogo {
+    color: var(--cor-principal);
+    transform: rotateY(180deg); 
+}
+
+.botaoJogar {
+    display: inline-block;
+    background-color: var(--cor-principal);
+    color: var(--cor-fundo);
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 15px;
+}
+
+.botaoJogar:hover {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-principal);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.botaoJogar i {
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.botaoJogar:hover i {
+    transform: translateX(5px);
+}
+
+
+/* --- SEÇÃO DE DESTAQUE DE IMPORTÂNCIA --- */
+.destaqueImportancia {
+    background-color: #ffc107; /* Fundo Verde Escuro */
+    padding: 100px 80px;
+}
+
+.destaqueConteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.iconeCentral {
+    flex-shrink: 0; /* Impede que o ícone diminua */
+    text-align: center;
+}
+
+.iconMaior {
+    /* Tamanho do Ícone */
+    font-size: 150px; 
+    color: #253900; /* Amarelo de destaque */
+    transition: transform 0.4s ease;
+}
+
+.destaqueConteudo:hover .iconMaior {
+    transform: scale(1.1); /* Efeito no hover do contêiner */
+}
+
+.textoImportancia {
+    flex: 1;
+    max-width: 45%;
+}
+
+.textoImportancia .tituloSecundario {
+    color: #253900 ;/* Título Branco/Off-White */
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.paragrafoDestaque {
+    color: #253900 ;/* Texto Principal Branco/Off-White */
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* Garante o alinhamento de texto (já que os blocos ficam nas laterais) */
+.textoImportancia.direito {
+    text-align: right;
+}
+
+.textoImportancia.direito .paragrafoDestaque {
+    margin-left: auto;
+}
+
+/* Ajustes para responsividade */
+@media (max-width: 1000px) {
+    .destaqueConteudo {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+    .textoImportancia {
+        max-width: 100%;
+        text-align: center;
+    }
+    .textoImportancia.direito {
+        text-align: center;
+    }
+    .textoImportancia .tituloSecundario {
+        text-align: center;
+    }
+    .paragrafoDestaque {
+        font-size: 18px;
+    }
+    .iconMaior {
+        font-size: 100px;
+        order: -1; /
+    }
+}
+
+/* ESTILIZAÇÃO DO FOOTER  */
+.site-footer {
+    background-color: var(--cor-principal);
+    color: var(--cor-fundo);
+    padding-top: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footerContainer {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footerColumn {
+    width: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+
+.footerColumn h3 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 22px;
+    color: var(--cor-secundaria);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.footerColumn p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.footerColumn ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footerColumn ul li a {
+    color: var(--cor-fundo);
+    transition: color 0.3s ease;
+    padding: 5px 0;
+    display: block;
+}
+
+.footerColumn ul li a:hover {
+    color: var(--cor-secundaria);
+}
+
+.footerSocial a {
+    color: var(--cor-fundo);
+    font-size: 20px;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.footerSocial a:hover {
+    color: var(--cor-secundaria);
+}
+
+.footerBottom {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid rgba(239, 238, 234, 0.2);
+    margin-top: 20px;
+}
+
+.footerBottom p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Media Queries para Responsividade Básica */
+@media (max-width: 900px) {
+    .cabecalho {
+        padding: 0 20px;
+    }
+    .menu {
+        display: none;
+    }
+    .iconMenu {
+        display: block !important;
+    }
+    .heroVideoFundo {
+        height: 450px;
+    }
+    .overlayConteudo {
+        padding: 30px 40px;
+    }
+    .tituloHero {
+        font-size: 45px;
+    }
+    .subtituloHero {
+        font-size: 20px;
+    }
+    .conteudoEducacao {
+        padding: 60px 40px;
+    }
+    .containerConteudo {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .textoConteudo, .imagemConteudo {
+        max-width: 100%;
+        text-align: center;
+    }
+    .tituloSecundario {
+        text-align: center;
+    }
+    .gamificacaoTitulo {
+        font-size: 40px;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .iconGamificacao {
+        font-size: 50px;
+    }
+    .jogosLista {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .jogoItem {
+        max-width: 100%;
+    }
+    .footerContainer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footerColumn {
+        width: 80%;
+        min-width: unset;
+    }
+}
+
+@media (max-width: 600px) {
+    .logotipo {
+        font-size: 60px;
+    }
+    .heroVideoFundo {
+        height: 350px;
+    }
+    .tituloHero {
+        font-size: 35px;
+    }
+    .subtituloHero {
+        font-size: 18px;
+    }
+    .conteudoEducacao {
+        padding: 40px 20px;
+    }
+    .gamificacaoTitulo {
+        font-size: 30px;
+    }
+    .iconGamificacao {
+        font-size: 40px;
+    }
+    .jogosLista {
+        padding: 0 20px;
+    }
+}

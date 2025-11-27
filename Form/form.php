@@ -22,23 +22,18 @@
 
     <div class="cabecalho">
 
-      <h1 class="logotipo">BIOTECH</h1>
+     <h1 class="logotipo"><a href="./index.html">BIOTECH</a></h1>
 
       <div class="nav-container">
 
         <ul class="menu">
 
-          <li>Home</li>
-
-          <li>Sobre Nós</li>
-
-          <li>Tecnologias</li>
-
-          <li>Educação</li>
-
-          <li>Soluções</li>
-
-          <li>Seja Nosso Parceiro</li>
+        <a href="./index.html"><li>Home</li></a>
+        <a href="./firstPages/sobreNos.html"><li>Sobre Nós</li></a>
+        <a href="./firstPages/tecnologias.html"><li>Tecnologias</li></a>
+        <a href="./firstPages/educacao.html"><li>Educação</li></a>
+        <a href="./Solucoes/solucoes.html"><li>Pesquisas</li></a>
+        <a href="./firstPages/parceiros.html"><li class="menuDestaque">Seja Nosso Parceiro</li></a>
 
         </ul>
 

@@ -198,7 +198,10 @@ a{
     line-height: 1.6; 
 }
 
-
+.menuDestaque {
+    color: var(--cor-secundaria); /* #ffc107 - Amarelo */
+    text-decoration: underline;
+}
 
 
 
@@ -263,12 +266,16 @@ a{
 
 /* VÍDEO (LADO DIREITO) */
 .ladoDireitoVideo {
-    flex: 1.5;
+    width: 800px;
+    height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0; 
 }
+
+
+
 
 .video-Sobre{
     /* Vídeo responsivo */

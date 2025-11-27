@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Pegada Ecológica | BIOTECH</title>
+    <link rel="stylesheet" href="stylePegada.css">
+    <link rel="shortcut icon" href="../assets/letra-b.png"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
+</head>
+
+<body>
+
+    <header>
+        <div class="cabecalho">
+            <h1 class="logotipo"><a href="./index.html">BIOTECH</a></h1> 
+            <div class="navContainer">
+                <ul class="menu">
+                    <a href="index.html"><li>Home</li></a>
+                    <li><a href="../firstPages/sobreNos.html">Sobre Nós</a></li>
+                    <a href="/firstPages/tecnologias.html"><li>Tecnologias</li></a>
+                    <a href="../firstPages/educacao.html"><li>Educação</li></a>
+                    <a href="/Solucoes/solucoes.html"><li>Pesquisas</li></a>
+                    <a href="/firstPages/parceiros.html"><li>Seja Nosso Parceiro</li></a>
+                </ul>
+                <div class="icones">
+                    <a href="../Form/telaLogin.html"><i class="fa-solid fa-user iconPerfil"></i></a>
+                    <i class="fa-solid fa-bars iconMenu"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="secaoSimulador">
+        <div class="simuladorContainer">
+
+            <h2 class="tituloSimulador">Simulador de Pegada Ecológica <i class="fa-solid fa-shoe-prints"></i></h2>
+            <p class="descricaoSimulador">
+                Responda às 10 perguntas a seguir e descubra como suas escolhas diárias impactam o planeta e o que você pode fazer para melhorar!
+            </p>
+
+            <form id="formPegada">
+
+                <div class="campoForm">
+                    <label for="transporte">1. Como você se desloca no dia a dia? <i class="fa-solid fa-car"></i> </label>
+                    <select id="transporte" name="transporte">
+                        <option value="1">Caminhada, Bicicleta ou Teletrabalho</option>
+                        <option value="2">Transporte Público (Ônibus/Metrô)</option>
+                        <option value="5">Carro Particular (combustível fóssil) ou Avião Frequente</option>
+                    </select>
+                </div>
+
+                <div class="campoForm">
+                    <label for="energia">2.  Qual a eficiência energética da sua casa? <i class="fa-solid fa-lightbulb"></i></label>
+                    <select id="energia" name="energia">
+                        <option value="1">Uso lâmpadas LED e aparelhos eficientes</option>
+                        <option value="3">Uso misto, atenção moderada</option>
+                        <option value="5">Uso muitos aparelhos antigos e não me preocupo com o consumo</option>
+                    </select>
+                </div>
+
+                <div class="campoForm">
+                    <label for="carne">3.  Qual seu consumo de carne vermelha? <i class="fa-solid fa-burger"></i></label>
+                    <select id="carne" name="carne">
+                        <option value="1">Vegetariano/Vegano</option>
+                        <option value="3">Raramente ou 1-2 vezes por semana</option>
+                        <option value="6">Quase todos os dias</option>
+                    </select>
+                </div>
+
+                <div class="campoForm">
+                    <label for="lixo">4.  Como você lida com o seu lixo? <i class="fa-solid fa-recycle"></i></label>
+                    <select id="lixo" name="lixo">
+                        <option value="1">Reciclo, faço compostagem e evito plásticos</option>
+                        <option value="3">Reciclo às vezes</option>
+                        <option value="5">Não reciclo e produzo muito lixo</option>
+                    </select>
+                </div>
+
+                <div class="campoForm">
+                    <label for="roupas">5.  Qual seu hábito de compra de roupas? <i class="fa-solid fa-shirt"></i></label>
+                    <select id="roupas" name="roupas">
+                        <option value="1">Compro roupas de segunda mão ou muito raramente</option>
+                        <option value="3">Compro ocasionalmente, buscando durabilidade</option>
+                        <option value="5">Compro em 'fast-fashion' com frequência</option>
+                    </select>
+                </div>
+
+                <div class="campoForm">
+                    <label for="agua">6.  Qual o seu uso de água no banho? <i class="fa-solid fa-shower"></i></label>
+                    <select id="agua" name="agua">
+                        <option value="1">Banho rápido (até 5 min) e reaproveito água</option>
+                        <option value="3">Banho moderado (5-10 min)</option>
+                        <option value="5">Banho longo (mais de 10 min)</option>
+                    </select>
+                </div>
+
+                <div class="campoForm">
+                    <label for="eletronicos">7. Com que frequência você troca seus eletrônicos? <i class="fa-solid fa-mobile-screen-button"></i> </label>
+                    <select id="eletronicos" name="eletronicos">
+                        <option value="1">Uso até o fim da vida útil (5+ anos)</option>
+                        <option value="3">Troco a cada 2-4 anos</option>
+                        <option value="5">Troco todo ano, buscando a última moda</option>
+                    </select>
+                </div>
+
+                <div class="campoForm">
+                    <label for="viagens">8.  Você faz viagens internacionais de avião? <i class="fa-solid fa-plane"></i></label>
+                    <select id="viagens" name="viagens">
+                        <option value="1">Não ou muito raramente</option>
+                        <option value="4">1 a 2 viagens por ano</option>
+                        <option value="8">Mais de 3 viagens por ano</option>
+                    </select>
+                </div>
+                
+                <div class="campoForm">
+                    <label for="localismo">9. De onde vêm seus alimentos?  <i class="fa-solid fa-basket-shopping"></i></label>
+                    <select id="localismo" name="localismo">
+                        <option value="1">Maioria de feiras locais/Orgânicos</option>
+                        <option value="3">Misto (supermercado e feira)</option>
+                        <option value="5">Apenas grandes redes e produtos importados</option>
+                    </select>
+                </div>
+
+                <div class="campoForm">
+                    <label for="mobiliario">10.  Qual seu consumo de móveis/decoração? <i class="fa-solid fa-couch"></i></label>
+                    <select id="mobiliario" name="mobiliario">
+                        <option value="1">Compro usados ou evito ao máximo</option>
+                        <option value="3">Compro ocasionalmente em lojas grandes</option>
+                        <option value="5">Mudo a decoração da casa com frequência</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="botaoCalcular">Calcular minha pegada</button>
+            </form>
+
+            <div id="resultado" class="resultadoBox" style="display:none;">
+                <h3 class="tituloResultado">Seu resultado:</h3>
+                <p id="textoResultado"></p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footerContainer">
+            <div class="footerColumn">
+                <h3>Sobre Nós</h3>
+                <p>Somos uma empresa dedicada à educação ambiental, desenvolvimento de tecnologias sustentáveis e parcerias com startups inovadoras.</p>
+            </div>
+            <div class="footerColumn">
+                <h3>Links Úteis</h3>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="/firstPages/sobreNos.html">Sobre Nós</a></li>
+                    <li><a href="/Solucoes/solucoes.html">Pesquisas</a></li>
+                    <li><a href="/firstPages/parceiros.html">Parceiros</a></li>
+                    <li><a href="/firstPages/parceiros.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footerColumn">
+                <h3>Contato</h3>
+                <p>Email: contato@biotech.com</p>
+                <p>Telefone: +55 11 99999-9999</p>
+                <div class="footerSocial">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footerBottom">
+            <p>© 2025 Biotech. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+    <script src="../javascript/pegadaEcologica.js"></script>
+
+</body>
+</html>

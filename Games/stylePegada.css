@@ -1,0 +1,387 @@
+/* Importação das fontes */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Variáveis de Cores e Configurações Globais */
+:root {
+    --cor-principal: #253900; /* Verde Escuro da Biotech */
+    --cor-secundaria: #ffc107; /* Amarelo Destaque */
+    --cor-fundo: #EFEEEA; /* Branco/Off-White do Fundo */
+    --cor-texto: #253900;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+    background-color: var(--cor-fundo); 
+    /* CORREÇÃO CRUCIAL PARA REMOVER A BARRA DE ROLAGEM HORIZONTAL */
+    overflow-x: hidden; 
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilização do *box-sizing* para incluir padding e borda na largura/altura */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
+/* ESTILIZAÇÃO DO HEADER (MANTIDO) */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cor-principal);
+    color: var(--cor-fundo);
+    height: 90px; 
+    padding: 0 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logotipo {
+    font-family: "Lexend", sans-serif;
+    font-weight: 700;
+    font-size: 80px; 
+    margin: 0;
+}
+
+.navContainer {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    font-size: 20px;
+    margin-right: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.menuDestaque {
+    color: var(--cor-secundaria);
+    text-decoration: underline;
+}
+
+.menu li:hover {
+    color: var(--cor-secundaria); 
+    text-decoration: underline; 
+    cursor: pointer; 
+}
+
+.menu li {
+    transition: color 0.3s ease, text-decoration 0.3s ease; 
+}
+
+.icones {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 25px;
+}
+
+.icones a, .icones i {
+    color: var(--cor-fundo);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.icones a:hover, .icones i:hover {
+    color: var(--cor-secundaria); 
+}
+
+/* ============================
+    FUNDO COM IMAGEM FULL WIDTH
+============================ */
+.secaoSimulador {
+    width: 100%;
+    min-height: calc(100vh - 90px); 
+    background-image: url('../assets/funodinicio3.jpg'); 
+    background-size: cover;
+    background-attachment: fixed; 
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 80px 40px;
+}
+
+/* ============================
+    CARD DO SIMULADOR
+============================ */
+.simuladorContainer {
+    background-color: rgba(239, 238, 234, 0.95); 
+    padding: 50px 60px;
+    border-radius: 20px;
+    max-width: 700px;
+    width: 100%;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+/* TÍTULOS */
+.tituloSimulador {
+    font-family: "Lexend", sans-serif;
+    font-size: 50px;
+    color: var(--cor-principal);
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 800;
+}
+
+/* Ícone de pegada no título */
+.tituloSimulador .fa-shoe-prints {
+    color: var(--cor-secundaria); 
+    font-size: 0.9em; 
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.tituloSimulador:hover .fa-shoe-prints {
+    transform: scale(1.1);
+}
+
+.descricaoSimulador {
+    text-align: center;
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 40px;
+    color: #494949;
+}
+
+/* CAMPOS DO FORMULÁRIO */
+.campoForm {
+    margin-bottom: 25px;
+}
+
+.campoForm label {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    color: var(--cor-principal);
+    font-size: 18px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Estilo para os ícones nas perguntas */
+.campoForm label i {
+    color: var(--cor-secundaria);
+    margin-right: 8px;
+    font-size: 1.1em;
+}
+
+.campoForm select {
+    width: 100%;
+    padding: 14px 18px;
+    border-radius: 12px;
+    border: 3px solid var(--cor-principal);
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    background-color: white;
+    appearance: none; 
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23253900'%3e%3cpath d='M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 1em;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.campoForm select:focus {
+    border-color: var(--cor-secundaria);
+    outline: none;
+}
+
+/* BOTÃO */
+.botaoCalcular {
+    width: 100%;
+    padding: 18px 20px;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--cor-principal);
+    color: var(--cor-fundo);
+    font-family: "Lexend", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
+}
+
+.botaoCalcular:hover {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-principal);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* RESULTADO */
+.resultadoBox {
+    margin-top: 40px;
+    background: #f7f7f7;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    border-left: 5px solid var(--cor-secundaria);
+}
+
+.tituloResultado {
+    font-family: "Lexend", sans-serif;
+    color: var(--cor-principal);
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.resultadoBox p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--cor-texto);
+}
+
+.resultadoBox ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+/* ESTILIZAÇÃO DO FOOTER (MANTIDO) */
+.site-footer {
+    background-color: var(--cor-principal);
+    color: var(--cor-fundo);
+    padding-top: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footerContainer {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footerColumn {
+    width: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+
+.footerColumn h3 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 22px;
+    color: var(--cor-secundaria);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.footerColumn p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.footerColumn ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footerColumn ul li a {
+    color: var(--cor-fundo);
+    transition: color 0.3s ease;
+    padding: 5px 0;
+    display: block;
+}
+
+.footerColumn ul li a:hover {
+    color: var(--cor-secundaria);
+}
+
+.footerSocial a {
+    color: var(--cor-fundo);
+    font-size: 20px;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.footerSocial a:hover {
+    color: var(--cor-secundaria);
+}
+
+.footerBottom {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid rgba(239, 238, 234, 0.2);
+    margin-top: 20px;
+}
+
+.footerBottom p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+/* Media Queries para Responsividade */
+@media (max-width: 1000px) {
+    .cabecalho {
+        padding: 0 20px;
+    }
+    .menu {
+        display: none; 
+    }
+    .iconMenu {
+        display: block !important; 
+    }
+    .logotipo {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .secaoSimulador {
+        padding: 40px 20px;
+        min-height: auto;
+    }
+    .simuladorContainer {
+        padding: 30px 25px;
+    }
+    .tituloSimulador {
+        font-size: 35px;
+    }
+    .descricaoSimulador {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    .campoForm label {
+        font-size: 16px;
+    }
+    .campoForm select {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+    .footerContainer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footerColumn {
+        width: 100%;
+        min-width: unset;
+        text-align: center;
+    }
+}

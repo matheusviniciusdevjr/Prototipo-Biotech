@@ -113,6 +113,11 @@ ul {
     gap: 60px;
 }
 
+.menuDestaque {
+    color: var(--cor-secundaria); /* #ffc107 - Amarelo */
+    text-decoration: underline;
+}
+
 .conteudoTexto {
     flex: 1;
     max-width: 50%;
